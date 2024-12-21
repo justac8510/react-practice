@@ -1,0 +1,76 @@
+*{
+    padding: 0px;
+    box-sizing: border-box; 
+    margin: 0px;
+    /*the difference between the border-box and content-fitting
+     is that child container will be outside of the parent container
+     if child container's padding and margin are not 0*/
+}
+
+body {
+    background-color: #3b36cc;
+    color: white;
+    display: flex; /*set the display setting to flex*/
+    flex-direction: row;
+    justify-content: center; /*every element in the body will be adjusted to center*/
+    font-family: sans-serif;
+}
+
+.wrapper {
+    width: 458px;
+    padding: 30px;
+    background-color: #1a1a40;
+    border-radius: 5px;
+    margin-top: 20px; 
+    /*margin is the space outside of a page element
+    while padding defines the space surrounding content within a web element*/
+    text-align: center;
+}
+
+.create-form {
+    height: 40px;
+    width: 100%; /*the width is going to be the 100% of width of the body component*/
+    margin: 25px 0px; /*上下 左右*/
+    border: 1px solid #3b36cc;
+    display: flex; /*強制讓input and button保持在同一行*/
+}
+
+/*
+> 代表選擇create-form裡面直接的子元素
+空格代表選擇create-form裡面有相關tag的所有子元素
+or you can give a class definition to input tag. This allows me to modify css properties by writing .create-form <classname> > input
+*/
+.create-form > input {
+    outline: none;
+    background: none;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.create-form > button {
+    border: none;
+    background-color: #3636cc;
+    color: white;
+    width: 50px;
+    height: 100%;
+    cursor: pointer; /*cursor swtiches to pointer if the cusor is on the button*/
+}
+
+.todo {
+    background-color: #3636cc;
+    height: 40px;
+    padding: 0 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*align all items to the center*/
+}
+
+.completed{
+    opacity: 0.4;
+    text-decoration: line-through 2px rgb(30, 26, 26);
+}
